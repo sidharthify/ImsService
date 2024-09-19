@@ -317,21 +317,6 @@
     .line 104
     invoke-virtual {v0, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
-    iget-object v0, p0, Lcom/mediatek/ims/config/internal/MtkImsConfigImpl;->mContext:Landroid/content/Context;
-
-    iget v1, p0, Lcom/mediatek/ims/config/internal/MtkImsConfigImpl;->mPhoneId:I
-
-    invoke-static {v0, v1}, Lcom/android/ims/ImsManager;->getInstance(Landroid/content/Context;I)Lcom/android/ims/ImsManager;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/mediatek/ims/internal/MtkImsManager;
-
-    .line 110
-    .local v0, "imsMgr":Lcom/mediatek/ims/internal/MtkImsManager;
-    invoke-virtual {v0}, Lcom/mediatek/ims/internal/MtkImsManager;->invalidateIsImsResCapSupportCache()V
-
     .line 112
     return-void
 .end method
@@ -1346,19 +1331,6 @@
     .line 434
     .end local v2    # "e":Lcom/android/ims/ImsException;
     :goto_0
-    iget-object v0, p0, Lcom/mediatek/ims/config/internal/MtkImsConfigImpl;->mContext:Landroid/content/Context;
-
-    iget v1, p0, Lcom/mediatek/ims/config/internal/MtkImsConfigImpl;->mPhoneId:I
-
-    invoke-static {v0, v1}, Lcom/android/ims/ImsManager;->getInstance(Landroid/content/Context;I)Lcom/android/ims/ImsManager;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/mediatek/ims/internal/MtkImsManager;
-
-    .line 435
-    .local v0, "imsMgr":Lcom/mediatek/ims/internal/MtkImsManager;
-    invoke-virtual {v0}, Lcom/mediatek/ims/internal/MtkImsManager;->invalidateIsImsResCapSupportCache()V
 
     .line 437
     return-void
