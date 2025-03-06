@@ -4161,7 +4161,7 @@
 .end method
 
 .method private registerForBroadcast()V
-    .locals 3
+    .locals 4
 
     .line 853
     new-instance v0, Landroid/content/IntentFilter;
@@ -4199,7 +4199,9 @@
 
     iget-object v2, p0, Lcom/mediatek/wfo/impl/WifiPdnHandler;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    const/4 v3, 0x2
+
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
     .line 860
     return-void

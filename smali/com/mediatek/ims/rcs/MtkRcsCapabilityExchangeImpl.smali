@@ -84,7 +84,7 @@
 .end method
 
 .method public constructor <init>(ILandroid/content/Context;Landroid/telephony/ims/stub/CapabilityExchangeEventListener;)V
-    .locals 5
+    .locals 6
     .param p1, "slotId"    # I
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "listener"    # Landroid/telephony/ims/stub/CapabilityExchangeEventListener;
@@ -246,7 +246,9 @@
 
     invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    const/4 v4, 0x2
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
     goto :goto_0
 
